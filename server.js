@@ -31,7 +31,7 @@ server.post("/api/games", (req, res) => {
 server.get("/api/games", (req, res) => {
   db.get()
     .then(games => {
-      res.status(200).json({ games });
+      res.status(200).json(games);
     })
     .catch(error => {
       console.log(error);

@@ -33,4 +33,9 @@ describe("GET index", () => {
     const response = await request(server).get("/api/games");
     expect(response.status).toEqual(200);
   });
+
+  it("test return empty array", async () => {
+    const response = await request(server).get("/api/games");
+    expect(response.body).toEqual([])
+  });
 });
