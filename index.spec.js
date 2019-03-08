@@ -12,11 +12,11 @@ describe("POST index", () => {
   });
 
   it("should respond 200 as expected", async () => {
-    const body = { title: "Testgame", genre: "dev", Year: "2020" };
+    const body = { "title": "Testgame", "genre": "dev", "Year": "2020" };
     const response = await request(server)
       .post("/api/games")
       .send(body);
-    expect(response.status).toEqual(200);
+    expect(response.status).toEqual(201);
   });
 
   it("should respond 422 as expected", async () => {
