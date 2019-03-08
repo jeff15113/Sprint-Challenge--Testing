@@ -11,7 +11,7 @@ describe("POST index", () => {
     await db("games").truncate();
   });
 
-  it("should respond 200 as expected", async () => {
+  it("should respond 201 as expected", async () => {
     const body = { "title": "Testgame", "genre": "dev", "Year": "2020" };
     const response = await request(server)
       .post("/api/games")
